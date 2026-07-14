@@ -92,8 +92,8 @@ The benchmark results regarding the **identification scenarios** of the baseline
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **ArcFace** | 82.76 | 94.09 | 9.30 | 18.15 | 8.10 | 20.95 | 5.71 | 19.05 |
 | **ElasticFace-Arc** | 81.41 | 93.05 | 8.53 | 17.95 | 9.05 | 18.57 | 5.71 | 20.95 |
-| **ArcFace$_{FT}$** | 95.58 | 98.87 | 30.28 | 52.58 | 34.29 | 62.38 | 30.48 | 55.71 |
-| **ElasticFace-Arc$_{FT}$** | 96.39 | 99.20 | 30.30 | 53.54 | 32.86 | 61.43 | 32.86 | 60.95 |
+| **$ArcFace_{FT}$** | 95.58 | 98.87 | 30.28 | 52.58 | 34.29 | 62.38 | 30.48 | 55.71 |
+| **$ElasticFace-Arc_{FT}$** | 96.39 | 99.20 | 30.30 | 53.54 | 32.86 | 61.43 | 32.86 | 60.95 |
 | **ViT-B/16** | 69.23 | 86.18 | 2.29 | 8.05 | 3.33 | 8.10 | 1.43 | 6.67 |
 | **ViT-L/14** | 65.82 | 83.53 | 2.15 | 7.24 | 1.90 | 8.57 | 0.48 | 4.76 |
 
@@ -112,7 +112,7 @@ The benchmark results regarding the **identification scenarios** of the baseline
 
 [6] Fadi Boutros, Naser Damer, Florian Kirchbuchner, Arjan Kuijper: ElasticFace: Elastic Margin Loss for Deep Face Recognition. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) - Workshops, 2022
 
-[7]
+[7] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever: Learning Trasnferable Visual Models From Natural Language Supervision. In: Proceedings of the 38th International Conference on Machine Learning, PMLR, 2021
 
 ## Citation
 
