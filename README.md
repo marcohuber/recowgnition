@@ -69,9 +69,9 @@ To evaluate the identification performance, the **Top-1 accuracy** and **Top-5 a
 
 The associated research paper evaluated six baseline benchmark models, covering three different approaches. These include: 
 - $ArcFace$ [5] (ResNet-100 trained from scratch with ArcFace loss only on cow images) 
-- $ElasticFace$-$Arc$ [6] (ResNet-100 trained from scratch with ElasticFace-Arc loss only on cow images) 
+- $ElasticFace-Arc$ [6] (ResNet-100 trained from scratch with ElasticFace-Arc loss only on cow images) 
 - $ArcFace_{FT}$ (human-based ResNet-100 model fine-tuned with ArcFace loss on cow images) 
-- $ElasticFace$-$Arc_{FT}$ (human-based ResNet-100 model fine-tuned with ElasticFace-Arc loss on cow images) 
+- $ElasticFace-Arc_{FT}$ (human-based ResNet-100 model fine-tuned with ElasticFace-Arc loss on cow images) 
 - $ViT$-$B/16$ [7] (zero-shot foundation model)
 - $ViT$-$L/14$ [7] (zero-shot foundation model)
  
@@ -81,8 +81,8 @@ The benchmark results regarding the **verification scenarios** of the baseline m
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **ArcFace** | 0.254 | 0.518 | 0.818 | 0.305 | 0.711 | 0.957 |
 | **ElasticFace-Arc** | 0.243 | 0.478 | 0.792 | 0.311 | 0.694 | 0.936 |
-| **ArcFace$_{FT}$** | 0.137 | 0.194 | 0.585 | 0.163 | 0.284 | 0.742 |
-| **ElasticFace-Arc$_{FT}$** | 0.129 | 0.172 | 0.533 | 0.154 | 0.260 | 0.713 |
+| **$ArcFace_{FT}$** | 0.137 | 0.194 | 0.585 | 0.163 | 0.284 | 0.742 |
+| **$ElasticFace-Arc_{FT}$** | 0.129 | 0.172 | 0.533 | 0.154 | 0.260 | 0.713 |
 | **ViT-B/16** | 0.364 | 0.626 | 0.842 | 0.479 | 0.873 | 0.985 |
 | **ViT-L/14** | 0.367 | 0.650 | 0.850 | 0.465 | 0.867 | 0.985 |
 
