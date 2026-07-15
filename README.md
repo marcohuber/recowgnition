@@ -122,7 +122,7 @@ The benchmark results regarding the **identification scenarios** of the baseline
 
 [6] Fadi Boutros, Naser Damer, Florian Kirchbuchner, Arjan Kuijper: ElasticFace: Elastic Margin Loss for Deep Face Recognition. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) - Workshops, 2022
 
-[7]
+[7] [7] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever: Learning Transferable Visual Models From Natural Language Supervision. In: Proceedings of the 38th International Conference on Machine Learning (ICML), 2021
 
 ## Citation
 
