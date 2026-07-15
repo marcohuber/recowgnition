@@ -82,8 +82,8 @@ The associated research paper evaluated six baseline benchmark models, covering 
 - $ElasticFace$-$Arc$ [6] (ResNet-100 trained from scratch with ElasticFace-Arc loss only on cow images) 
 - $ArcFace_{FT}$ (human-based ResNet-100 model fine-tuned with ArcFace loss on cow images) 
 - $ElasticFace$-$Arc_{FT}$ (human-based ResNet-100 model fine-tuned with ElasticFace-Arc loss on cow images) 
-- $ViT$-$B/16$ [7] (zero-shot foundation model)
-- $ViT$-$L/14$ [7] (zero-shot foundation model)
+- ViT-B/16 [7] (zero-shot foundation model)
+- ViT-L/14 [7] (zero-shot foundation model)
  
 The benchmark results regarding the **verification scenarios** of the baseline models on the ReCowGnition benchmark are provided in the table below (for a proper discussion see the associated paper). 
 
