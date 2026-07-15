@@ -46,11 +46,14 @@ To detect and align the cow face images, we developed and provide *CowDetect*. *
 ### Image Preprocessing & Alignment
 After the detection and alignment of the cow faces, the images have been scaled and cropped to the size of 112x112 pixels, following the standard image size for human faces in face recognition. Afterwards, the images have been manually scanned and misdetected images have been removed. 
 
+The final benchmark consists of 6,838 different images of 161 individual cows. The average number of images per individual cow is 42 images. 
+
+The filenames follow the structure:
+**[recording\_session]\_[cowID]\_[a]\_[b].jpg**
+where [recording\_session] referst to one of the five session IDs mentioned above, [cowID] refers to a unique numerical identity label of each individual cow, and [a] and [b] are arbitrary numbers added during the preprocessing pipeline to obtain unique filenames.
+
 ### The Cows
 All of the recorded cows are Holstein Friesian cows and some of them are related by blood, as the majority of cows have been bred at the farm. The heritage lines are not tracked in the dataset and just mentioned as a potential additional challenge of the dataset. All the cows are used for milk production and are therefore (obviously) female. The age range of the cows covers 2 to 7 years. The recorded cows were identity labeled by an employee of the farm with an identity based on the records of the farm and identity markers not visible in the videos. An additional challenge present in this dataset is the greater degree of pitch freedom cows have enabled by their long necks. This allows the cows to tilt their head much further than humans typically do, resulting in facial views from steep top-down or bottom-up angles. 
-
-### ReCowGnition Dataset Statistics
-The final benchmark consists of 6,838 different images of 161 individual cows. The average number of images per individual cow is 42 images. 
 
 ## Evaluation Protocols
 In contrast to most existing work, the benchmark assumes a biometric approach to cattle recognition, similar to human face recognition. This involves a feature extraction and comparison pipeline during evaluation rather than a classification approach. Approaching (human or cow) face recognition as a classification problem has the disadvantage that it requires several instances of the respective class (e.g., an individual cow) and the classes (e.g. all cows to be classified) have to be fixed in advance before the classification model is trained. If a new cow is added to the farm, the model has to be updated as unknown classes appear and not updating the model would lead to false classifications. This approach is impractical as, in reality, a cow face recognition system should be able to handle large numbers of changing individuals. Cows might, on a regular basis, be born, die, be bought or be sold. 
