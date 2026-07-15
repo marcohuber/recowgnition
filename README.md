@@ -34,8 +34,6 @@ The five recording sessions are named:
 - GX014041
 - GX014040
 - GX014028
- and the filename are structured as:
-ö
 
 ### Frame Extraction
 To obtain a reasonable amount of cow images for testing and to ensure some variation between the images, every 5th frame has been extracted from the recorded video streams. After the frame extraction, some of the images have been rotated based on the recording angle to normalize the head position for the cow detection system.
