@@ -47,7 +47,9 @@ After the detection and alignment of the cow faces, the images have been scaled 
 The final benchmark consists of 6,838 different images of 161 individual cows. The average number of images per individual cow is 42 images. 
 
 The filenames follow the structure:
-**[recording\_session]\_[cowID]\_[a]\_[b].jpg**
+
+> **[recording\_session]\_[cowID]\_[a]\_[b].jpg**
+
 where [recording\_session] referst to one of the five session IDs mentioned above, [cowID] refers to a unique numerical identity label of each individual cow, and [a] and [b] are arbitrary numbers added during the preprocessing pipeline to obtain unique filenames.
 
 ### The Cows
@@ -122,7 +124,7 @@ The benchmark results regarding the **identification scenarios** of the baseline
 
 [6] Fadi Boutros, Naser Damer, Florian Kirchbuchner, Arjan Kuijper: ElasticFace: Elastic Margin Loss for Deep Face Recognition. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) - Workshops, 2022
 
-[7] [7] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever: Learning Transferable Visual Models From Natural Language Supervision. In: Proceedings of the 38th International Conference on Machine Learning (ICML), 2021
+[7] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever: Learning Transferable Visual Models From Natural Language Supervision. In: Proceedings of the 38th International Conference on Machine Learning (ICML), 2021
 
 ## Citation
 
