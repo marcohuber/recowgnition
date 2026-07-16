@@ -15,7 +15,7 @@ The associated paper was accepted at the *Sustainable Pattern Recognition & Patt
 The paper which provides more information can be found here: [To-be-added-after-final-publication].
 
 The rest of this readme is structured as follows:
-- [Installation](#installation)
+- [Install](#install)
 - [Usage](#usage)
 - [Dataset & Detection Details](#dataset-&-detection-details)
 - [Evaluation Protocols](#evaluation-protocols)
@@ -25,7 +25,7 @@ The rest of this readme is structured as follows:
 - [License](#license)
 
 
-## Installation
+## Install
 
 1. Clone this repository & prepare python and virtual environments (recommended)
 2. Install dependencies
