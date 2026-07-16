@@ -86,6 +86,10 @@ To obtain a reasonable amount of cow images for testing and to ensure some varia
 ### Cow Detection System
 To detect and align the cow face images, we developed and provide *CowDetect*. *CowDetect* is based on a pre-trained YOLO-v11n [1] and has been trained to detect cow face images and cow muzzles. The detected muzzle is used to align the cow face images by ensuring that the detected muzzles always appear at the same position. This is done as alignment has been proven as a simple technique to increase face recognition performance. *CowDetect* was fine-tuned on a subset (6,375 cow images) of the dataset of Yao et al. [2] and the CSCE873CV dataset [3] images .
 
+An example of the results of *CowDetect* on a video:
+
+![CowDetect GIF](cowdetect_sample.gif "CowDetect GIF")
+
 ### Image Preprocessing & Alignment
 After the detection and alignment of the cow faces, the images have been scaled and cropped to the size of 112x112 pixels, following the standard image size for human faces in face recognition. Afterwards, the images have been manually scanned and misdetected images have been removed. 
 
