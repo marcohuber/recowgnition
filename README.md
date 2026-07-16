@@ -1,5 +1,7 @@
 # ReCowGnition: A Realistic Biometric Benchmark for Cow Face Recognition
 
+![ReCowGnition Sample Images](recowgnition_sample.png "ReCowGnition Sample Images")
+
 This is the official repository of the "ReCowGnition" benchmark.
 
 ## Overview
