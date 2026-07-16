@@ -6,7 +6,7 @@ This is the official repository of the "ReCowGnition" benchmark.
 
 The ReCowGnition benchmark is a realistic biometric benchmark of identity-labeled cow faces and aims to encourage future and comparable research in the field of Cow Face Recognition. The dataset is **free for non-commercial use** and can be requested here by **providing a full name and affiliation**: [Request Access](https://drive.google.com/drive/folders/1ywFj3_pew7uOG0FUnbDbkRiz6JPOpAaB?usp=sharing)
 
-Along with the images of the dataset, we also provide additional tools, including *CowDetect*, a cow face and muzzle detection model which was used during the creation of the dataset.
+Along with the images of the dataset, we also provide additional tools, including *CowDetect*, a cow face and muzzle detection model which was used during the creation of the dataset, and *evaluation scripts* that performs the benchmark evaluation based on the defined protocols. The *CowDetect* model can be requested together with the dataset (see link above). 
 
 The benchmark recognition models utilized in the paper are **not** provided, however, for questions or interest in cooperation in this regard, please email: marco.huber@igd.fraunhofer.de
 
@@ -15,12 +15,55 @@ The associated paper was accepted at the *Sustainable Pattern Recognition & Patt
 The paper which provides more information can be found here: [To-be-added-after-final-publication].
 
 The rest of this readme is structured as follows:
+- [Installation](#installation)
+- [Usage](#usage)
 - [Dataset & Detection Details](#dataset-&-detection-details)
 - [Evaluation Protocols](#evaluation-protocols)
 - [Benchmark Results](#benchmark-results)
 - [References](#references)
 - [Citation](#citation)
 - [License](#license)
+
+
+## Installation
+
+1. Clone this repository & prepare python and virtual environments (recommended)
+2. Install dependencies
+> pip install -r requirements.txt
+
+## Usage
+
+### Cow Face Detection
+The pre-trained *CowDetect* model can be used for a single video with:
+> python CowDetection.py --mode [mode] --input [input-path] --output [output-path] --model [model-path] 
+
+e.g., 
+
+> python CowDetection.py --mode "detect_video" --input "./input_vid/GX014028_47.mp4" --output "./output" --model "./model/CowDetect.pt"
+
+This code extract for a single video, GX014028_47.mp4, each detected cow face (without alignment or scaling). Further available parameters are:
+- \-\-thr_c: cow face confidence threshold (default: 0.5)
+- \-\-thr_m: muzzle confidence threhsold (default: 0.2)
+- \-\-frame_step: frame extraction interval (default: 1, for the dataset 5 was used)
+- \-\-rotation: rotation mode for frames: '90_clockwise', '90_counterclockwise', '180', '45' or 'None'.
+
+To extract cow faces in images (without alignment or scaling), the pre-trained *CowDetect* can be used with, e.g.,
+> python CowDetection.py --mode "detect_images" --input "./input_img/" --output "./output" -- model "./model/CowDetect.pt"
+
+The available additional parameter are: 
+- \-\-thr_c: cow face confidence threshold (default: 0.5)
+- \-\-thr_m: muzzle confidence threhsold (default: 0.2)
+
+To generate a dataset based on a set of videos, the "create_dataset" mode can be used, e.g.,:
+> python CowDetection.py --mode "create_dataset" --input "./input_db/" --output "./output" -- model "./model/CowDetect.pt"
+
+This generates based on the videos a similar image dataset as the provided *ReCowGnition* dataset. The output consists of extracted, aligned and scaled cow faces. To maintain consists filenames that include the identity, the provided input videos filenames should follow the structure of the provided image filenames.
+
+The available additional parameters are, similar to the video extraction: 
+- \-\-thr_c: cow face confidence threshold (default: 0.5)
+- \-\-thr_m: muzzle confidence threhsold (default: 0.2)
+- \-\-frame_step: frame extraction interval (default: 1, for the dataset 5 was used)
+- \-\-rotation: rotation mode for frames: '90_clockwise', '90_counterclockwise', '180', '45' or 'None'.
 
 
 ## Dataset & Detection Details
