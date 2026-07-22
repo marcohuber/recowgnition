@@ -67,6 +67,28 @@ The available additional parameters are, similar to the video extraction:
 - \-\-frame_step: frame extraction interval (default: 1, for the dataset 5 was used)
 - \-\-rotation: rotation mode for frames: '90_clockwise', '90_counterclockwise', '180', '45' or 'None'.
 
+### Evaluation Script
+
+The evaluation.py file provides the necessary functions for all evaluation protocols (see also [Evaluation Protocols](#evaluation-protocols))
+
+For verification, 
+
+> def verification (model, path, not_same_session):
+
+takes a trained, pre-loaded model (torch.nn.Module) as the investigated model that is used to extract the cow face embeddings, the path to the ReCowGnition images (folder) and a boolean if only same session images should be used (*False*: $V_{ALL}$, *True*: $V_{CS})$. It outputs EER, EER threshold, FNMR@10%, FNMR@10% threshold, FNMR@1%, and FNMR@1% threshold.
+
+For identification, four different functions are provided:
+
+> def identification_image(model, path, device, top_k):
+>
+> def identification_image_cross_session(model, path, device, top_k):
+> 
+> def identification_embedding_fusion_cross_session(model, path, device, top_k):
+> 
+> def identification_score_fusion_cross_session(model, path, device, top_k):
+> 
+
+All of them take a trained, pre-loaded model (torch.nn.Module) as the investigated model that is used to extract the cow face embeddings, the path to the ReCowGnition images (folder), the cuda device, and the investigated top_k parameter (in the benchmark: **top_k=(1,5)**). The output is a dictionary mapping each $k$ in top_k to the corresponding top-k identification accuracy and the CMC curve values based on the selected evaluation protocol ($I_{ALL}$, $I_{CS}$, $I_{EF}$, and $I_{SF}$).
 
 ## Dataset & Detection Details
 
