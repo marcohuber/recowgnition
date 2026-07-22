@@ -80,9 +80,13 @@ takes a trained, pre-loaded model (torch.nn.Module) as the investigated model th
 For identification, four different functions are provided:
 
 > def identification_image(model, path, device, top_k):
+>
 > def identification_image_cross_session(model, path, device, top_k):
+> 
 > def identification_embedding_fusion_cross_session(model, path, device, top_k):
+> 
 > def identification_score_fusion_cross_session(model, path, device, top_k):
+> 
 
 All of them take a trained, pre-loaded model (torch.nn.Module) as the investigated model that is used to extract the cow face embeddings, the path to the ReCowGnition images (folder), the cuda device, and the investigated top_k parameter (in the benchmark: **top_k=(1,5)**). The output is a dictionary mapping each $k$ in top_k to the corresponding top-k identification accuracy and the CMC curve values based on the selected evaluation protocol ($I_{ALL}$, $I_{CS}$, $I_{EF}$, and $I_{SF}$).
 
